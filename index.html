@@ -5,93 +5,127 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Substantial Auto Customs | Atlanta’s Premier Auto Customization Studio</title>
   <meta name="description" content="Transform your car with Atlanta’s elite auto customization experts. Custom paint, performance upgrades, detailing, and more. Get a free quote today!">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
-    .hero { background: #333; color: #fff; text-align: center; padding: 100px 20px; }
+    .hero { background: url('hero-image.jpg') no-repeat center center/cover; color: #fff; text-align: center; padding: 100px 20px; }
     .cta-button { background: #ff5722; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; margin: 10px; }
-    .services, .testimonials, .contact { padding: 50px 20px; text-align: center; }
-    .services h2, .testimonials h2, .contact h2 { margin-bottom: 20px; }
+    .cta-button:hover { background: #e64a19; transform: scale(1.05); transition: all 0.3s ease; }
+    .services, .testimonials, .contact, .consultation { padding: 50px 20px; text-align: center; }
+    .services h2, .testimonials h2, .contact h2, .consultation h2 { color: #ff5722; margin-bottom: 20px; }
+    .services ul, .consultation ul { list-style-type: none; padding: 0; max-width: 600px; margin: 0 auto; text-align: left; }
+    .services ul li, .consultation ul li { margin: 10px 0; }
+    .testimonials { background: #f9f9f9; }
+    .contact form, .consultation .calendly-inline-widget { max-width: 400px; margin: 0 auto; text-align: left; }
+    .contact input, .contact select, .contact textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+    .contact button { background: #ff5722; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
     footer { background: #333; color: #fff; text-align: center; padding: 20px; }
-    form { max-width: 400px; margin: 0 auto; text-align: left; }
-    form input, form select, form textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
-    form button { background: #ff5722; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+    footer a { color: #ff5722; text-decoration: none; }
   </style>
 </head>
 <body>
-  <div class="hero">
+  <!-- Hero Section -->
+  <div class="hero" data-aos="fade-up">
     <h1>Transform Your Ride with Atlanta’s Elite Auto Customization Experts</h1>
     <p>From flawless paint jobs to performance upgrades, we bring your vision to life with precision and passion.</p>
     <a href="#contact" class="cta-button">Get a Free Quote</a>
-    <a href="#contact" class="cta-button">Book a $50 Consultation</a>
+    <a href="#consultation" class="cta-button">Book a Consultation</a>
   </div>
 
-  <div class="services">
-  <h2>Our Services</h2>
-  <p>We specialize in:</p>
-  <ul>
-    <li><strong>Paint Refinishing & Correction:</strong> Restore your car’s finish to showroom quality with our expert paint correction and refinishing services.</li>
-    <li><strong>Paint Protection:</strong> Protect your investment with premium ceramic coatings and paint protection films (PPF).</li>
-    <li><strong>High-End Detailing:</strong> From exterior shines to interior deep cleans, we deliver unmatched attention to detail.</li>
-    <li><strong>Custom & Candy Paint Jobs:</strong> Make a statement with bespoke finishes like candy, pearl, and metallic paints.</li>
-    <li><strong>Custom Audio Installs:</strong> Upgrade your ride with high-fidelity sound systems tailored to your preferences.</li>
-    <li><strong>Restorations:</strong> Bring classics, exotics, and luxury vehicles back to life with our full restoration services.</li>
-    <li><strong>Automotive Consultations:</strong> Get expert guidance on modifications, purchasing, and sales to make informed decisions about your vehicle.</li>
-  </ul>
-  <a href="#contact" class="cta-button">Learn More</a>
-</div>
-    <a href="#contact" class="cta-button">Learn More</a>
+  <!-- Services Section -->
+  <div id="services" class="services" data-aos="fade-up">
+    <h2>Our Services</h2>
+    <p>We specialize in:</p>
+    <ul>
+      <li><i class="fas fa-paint-roller"></i> <strong>Paint Refinishing & Correction:</strong> Restore your car’s finish to showroom quality.</li>
+      <li><i class="fas fa-shield-alt"></i> <strong>Paint Protection:</strong> Premium ceramic coatings and PPF to protect your investment.</li>
+      <li><i class="fas fa-car"></i> <strong>High-End Detailing:</strong> From exterior shines to interior deep cleans.</li>
+      <li><i class="fas fa-palette"></i> <strong>Custom & Candy Paint Jobs:</strong> Bespoke finishes that turn heads.</li>
+      <li><i class="fas fa-music"></i> <strong>Custom Audio Installs:</strong> High-fidelity sound systems tailored to your preferences.</li>
+      <li><i class="fas fa-tools"></i> <strong>Restorations:</strong> Bring classics, exotics, and luxury vehicles back to life.</li>
+      <li><i class="fas fa-comments"></i> <strong>Automotive Consultations:</strong> Expert guidance on modifications, purchasing, and sales.</li>
+    </ul>
   </div>
 
-  <div class="testimonials">
+  <!-- Testimonials Section -->
+  <div class="testimonials" data-aos="fade-up">
     <h2>What Our Clients Say</h2>
     <p>"Substantial Auto Customs transformed my car into a masterpiece! Their attention to detail is unmatched." – John D.</p>
     <p>"From performance upgrades to custom paint, they delivered beyond my expectations. Highly recommend!" – Sarah L.</p>
   </div>
 
-  <<!-- Free Quote Form -->
-<div id="contact" class="contact">
-  <h2>Get a Free Quote</h2>
-  <p>Fill out the form below, and we’ll get back to you within 24 hours with a detailed estimate.</p>
-  <form>
-    <input type="text" placeholder="Name" required>
-    <input type="email" placeholder="Email" required>
-    <input type="tel" placeholder="Phone" required>
-    <select required>
-      <option value="" disabled selected>Select a Service</option>
-      <option value="paint-refinishing">Paint Refinishing & Correction</option>
-      <option value="paint-protection">Paint Protection (Ceramic Coatings & PPF)</option>
-      <option value="detailing">High-End Detailing</option>
-      <option value="custom-paint">Custom & Candy Paint Jobs</option>
-      <option value="audio">Custom Audio Installs</option>
-      <option value="restorations">Restorations</option>
-      <option value="consultations">Automotive Consultations</option>
-    </select>
-    <textarea placeholder="Tell us about your project (optional)"></textarea>
-    <button type="submit">Submit</button>
-  </form>
-</div>
-
-<!-- Consultation Section -->
-<div id="consultation" class="consultation">
-  <h2>Book a $50 Consultation</h2>
-  <p>Not sure where to start? Schedule a one-on-one consultation with our experts to discuss your vision and get personalized recommendations.</p>
-  <ul>
-    <li><strong>What’s Included:</strong></li>
-    <li>Personalized advice on modifications, purchasing, and sales.</li>
-    <li>A detailed plan tailored to your goals and budget.</li>
-    <li>Answers to all your questions about auto customization.</li>
-  </ul>
-  <a href="https://paypal.me/yourlink" class="cta-button">Book Your Consultation Now</a>
-</div>
- 
-  
-</div>>
+  <!-- Free Quote Form -->
+  <div id="contact" class="contact" data-aos="fade-up">
+    <h2>Get a Free Quote</h2>
+    <p>Fill out the form below, and we’ll get back to you within 24 hours with a detailed estimate.</p>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="tel" placeholder="Phone" required>
+      <select required>
+        <option value="" disabled selected>Select a Service</option>
+        <option value="paint-refinishing">Paint Refinishing & Correction</option>
+        <option value="paint-protection">Paint Protection (Ceramic Coatings & PPF)</option>
+        <option value="detailing">High-End Detailing</option>
+        <option value="custom-paint">Custom & Candy Paint Jobs</option>
+        <option value="audio">Custom Audio Installs</option>
+        <option value="restorations">Restorations</option>
+        <option value="consultations">Automotive Consultations</option>
+      </select>
+      <textarea placeholder="Tell us about your project (optional)"></textarea>
+      <button type="submit">Submit</button>
+    </form>
   </div>
 
+  <!-- Consultation Section -->
+  <div id="consultation" class="consultation" data-aos="fade-up">
+    <h2>Book a Consultation</h2>
+    <p>Not sure where to start? Schedule a consultation with our experts to discuss your vision and get personalized recommendations.</p>
+    
+    <h3>1-Hour Phone/Video Consultation - $50</h3>
+    <ul>
+      <li><strong>What’s Included:</strong></li>
+      <li>Personalized advice on modifications, purchasing, and sales.</li>
+      <li>A detailed plan tailored to your goals and budget.</li>
+      <li>Answers to all your questions about auto customization.</li>
+      <li><strong>Duration:</strong> 1 hour max.</li>
+      <li><strong>Objective:</strong> Discuss your project goals and get expert recommendations over the phone or video call.</li>
+    </ul>
+    <!-- Calendly Embed for Phone/Video Consultation -->
+    <div class="calendly-inline-widget" data-url="https://calendly.com/your-link/phone-video-consultation" style="min-width:320px;height:600px;"></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+    <h3>In-Person Consultation - $150</h3>
+    <ul>
+      <li><strong>What’s Included:</strong></li>
+      <li>Everything in the phone/video consultation, plus:</li>
+      <li>On-site evaluation of your vehicle.</li>
+      <li>Hands-on recommendations for customization and upgrades.</li>
+      <li><strong>Duration:</strong> 1 hour max.</li>
+      <li><strong>Objective:</strong> Get a detailed, in-person assessment of your vehicle and a customized plan for your project.</li>
+      <li><strong>Perks:</strong></li>
+      <li>10% discount on your first service.</li>
+      <li>Free vehicle inspection report.</li>
+      <li>Priority scheduling for follow-up services.</li>
+      <li><strong>Note:</strong> Additional mileage fees apply for locations outside our service area.</li>
+    </ul>
+    <!-- Calendly Embed for In-Person Consultation -->
+    <div class="calendly-inline-widget" data-url="https://calendly.com/your-link/in-person-consultation" style="min-width:320px;height:600px;"></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  </div>
+
+  <!-- Footer -->
   <footer>
     <p>📍 Serving Atlanta and Metro North, East, and Northeast areas.</p>
     <p>📞 [Your Phone Number] | 📧 [Your Email Address]</p>
-    <p>🌐 <a href="https://subautoatl.github.io" style="color: #ff5722; text-decoration: none;">SubstantialAuto.github.io</a></p>
+    <p>🌐 <a href="https://subautoatl.github.io">SubstantialAuto.github.io</a></p>
   </footer>
+
+  <!-- AOS Initialization -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
