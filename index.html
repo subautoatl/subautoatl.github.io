@@ -8,57 +8,232 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
-    .hero { background: url('hero-image.jpg') no-repeat center center/cover; color: #fff; text-align: center; padding: 100px 20px; }
-    .cta-button { background: #ff5722; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; margin: 10px; }
-    .cta-button:hover { background: #e64a19; transform: scale(1.05); transition: all 0.3s ease; }
-    .services, .testimonials, .contact, .consultation { padding: 50px 20px; text-align: center; }
-    .services h2, .testimonials h2, .contact h2, .consultation h2 { color: #ff5722; margin-bottom: 20px; }
-    .services ul, .consultation ul { list-style-type: none; padding: 0; max-width: 600px; margin: 0 auto; text-align: left; }
-    .services ul li, .consultation ul li { margin: 10px 0; }
-    .testimonials { background: #f9f9f9; }
-    .contact form, .consultation .calendly-inline-widget { max-width: 400px; margin: 0 auto; text-align: left; }
-    .contact input, .contact select, .contact textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
-    .contact button { background: #ff5722; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
-    footer { background: #333; color: #fff; text-align: center; padding: 20px; }
-    footer a { color: #ff5722; text-decoration: none; }
+    /* General Styles */
+    body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #1a1a1a; color: #fff; }
+    h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+    a { color: #ff5722; text-decoration: none; }
+    a:hover { color: #e64a19; }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://via.placeholder.com/1920x1080/333/fff?text=Custom+Paint+Job') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero h1 {
+      font-size: 4.5rem;
+      margin: 0;
+      animation: float 3s infinite ease-in-out;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    .hero p {
+      font-size: 1.5rem;
+      margin: 20px 0;
+    }
+    .cta-button {
+      background: #ff5722;
+      color: #fff;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+    .cta-button:hover {
+      background: #e64a19;
+      transform: scale(1.1);
+    }
+
+    /* Services Section */
+    .services {
+      padding: 80px 20px;
+      background: #262626;
+      text-align: center;
+    }
+    .services h2 {
+      font-size: 3rem;
+      margin-bottom: 40px;
+      color: #ff5722;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .service-card {
+      background: #333;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+    }
+    .service-card i {
+      font-size: 2.5rem;
+      color: #ff5722;
+      margin-bottom: 15px;
+    }
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin: 10px 0;
+    }
+    .service-card p {
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+      padding: 80px 20px;
+      background: url('https://via.placeholder.com/1920x800/444/fff?text=Luxury+Car+Showcase') no-repeat center center/cover;
+      text-align: center;
+      color: #fff;
+    }
+    .testimonials h2 {
+      font-size: 3rem;
+      margin-bottom: 40px;
+      color: #ff5722;
+    }
+    .testimonial-card {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+    .testimonial-card p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+    .testimonial-card span {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #ff5722;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 80px 20px;
+      background: #1a1a1a;
+      text-align: center;
+    }
+    .contact h2 {
+      font-size: 3rem;
+      margin-bottom: 40px;
+      color: #ff5722;
+    }
+    .contact form {
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .contact input, .contact select, .contact textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #444;
+      border-radius: 5px;
+      background: #333;
+      color: #fff;
+    }
+    .contact button {
+      background: #ff5722;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    footer p {
+      margin: 5px 0;
+    }
   </style>
 </head>
 <body>
   <!-- Hero Section -->
   <div class="hero" data-aos="fade-up">
-    <h1>Transform Your Ride with Atlanta’s Elite Auto Customization Experts</h1>
-    <p>From flawless paint jobs to performance upgrades, we bring your vision to life with precision and passion.</p>
-    <a href="#contact" class="cta-button">Get a Free Quote</a>
-    <a href="#consultation" class="cta-button">Book a Consultation</a>
+    <div>
+      <h1>Transform Your Ride</h1>
+      <p>Atlanta’s Premier Auto Customization Studio</p>
+      <a href="#contact" class="cta-button">Get a Free Quote</a>
+      <a href="#consultation" class="cta-button">Book a Consultation</a>
+    </div>
   </div>
 
   <!-- Services Section -->
   <div id="services" class="services" data-aos="fade-up">
     <h2>Our Services</h2>
-    <p>We specialize in:</p>
-    <ul>
-      <li><i class="fas fa-paint-roller"></i> <strong>Paint Refinishing & Correction:</strong> Restore your car’s finish to showroom quality.</li>
-      <li><i class="fas fa-shield-alt"></i> <strong>Paint Protection:</strong> Premium ceramic coatings and PPF to protect your investment.</li>
-      <li><i class="fas fa-car"></i> <strong>High-End Detailing:</strong> From exterior shines to interior deep cleans.</li>
-      <li><i class="fas fa-palette"></i> <strong>Custom & Candy Paint Jobs:</strong> Bespoke finishes that turn heads.</li>
-      <li><i class="fas fa-music"></i> <strong>Custom Audio Installs:</strong> High-fidelity sound systems tailored to your preferences.</li>
-      <li><i class="fas fa-tools"></i> <strong>Restorations:</strong> Bring classics, exotics, and luxury vehicles back to life.</li>
-      <li><i class="fas fa-comments"></i> <strong>Automotive Consultations:</strong> Expert guidance on modifications, purchasing, and sales.</li>
-    </ul>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-spray-can"></i>
+        <h3>Paint Refinishing</h3>
+        <p>Restore your car’s finish to showroom quality.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Paint Protection</h3>
+        <p>Premium ceramic coatings and PPF.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-car"></i>
+        <h3>High-End Detailing</h3>
+        <p>Exterior shines and interior deep cleans.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-palette"></i>
+        <h3>Custom Paint Jobs</h3>
+        <p>Bespoke finishes that turn heads.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-music"></i>
+        <h3>Custom Audio</h3>
+        <p>High-fidelity sound systems.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-tools"></i>
+        <h3>Restorations</h3>
+        <p>Bring classics and exotics back to life.</p>
+      </div>
+    </div>
   </div>
 
   <!-- Testimonials Section -->
   <div class="testimonials" data-aos="fade-up">
     <h2>What Our Clients Say</h2>
-    <p>"Substantial Auto Customs transformed my car into a masterpiece! Their attention to detail is unmatched." – John D.</p>
-    <p>"From performance upgrades to custom paint, they delivered beyond my expectations. Highly recommend!" – Sarah L.</p>
+    <div class="testimonial-card">
+      <p>"Substantial Auto Customs transformed my car into a masterpiece! Their attention to detail is unmatched."</p>
+      <span>– John D.</span>
+    </div>
+    <div class="testimonial-card">
+      <p>"From performance upgrades to custom paint, they delivered beyond my expectations. Highly recommend!"</p>
+      <span>– Sarah L.</span>
+    </div>
   </div>
 
-  <!-- Free Quote Form -->
+  <!-- Contact Section -->
   <div id="contact" class="contact" data-aos="fade-up">
     <h2>Get a Free Quote</h2>
-    <p>Fill out the form below, and we’ll get back to you within 24 hours with a detailed estimate.</p>
     <form>
       <input type="text" placeholder="Name" required>
       <input type="email" placeholder="Email" required>
@@ -76,43 +251,6 @@
       <textarea placeholder="Tell us about your project (optional)"></textarea>
       <button type="submit">Submit</button>
     </form>
-  </div>
-
-  <!-- Consultation Section -->
-  <div id="consultation" class="consultation" data-aos="fade-up">
-    <h2>Book a Consultation</h2>
-    <p>Not sure where to start? Schedule a consultation with our experts to discuss your vision and get personalized recommendations.</p>
-    
-    <h3>1-Hour Phone/Video Consultation - $50</h3>
-    <ul>
-      <li><strong>What’s Included:</strong></li>
-      <li>Personalized advice on modifications, purchasing, and sales.</li>
-      <li>A detailed plan tailored to your goals and budget.</li>
-      <li>Answers to all your questions about auto customization.</li>
-      <li><strong>Duration:</strong> 1 hour max.</li>
-      <li><strong>Objective:</strong> Discuss your project goals and get expert recommendations over the phone or video call.</li>
-    </ul>
-    <!-- Calendly Embed for Phone/Video Consultation -->
-    <div class="calendly-inline-widget" data-url="https://calendly.com/your-link/phone-video-consultation" style="min-width:320px;height:600px;"></div>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
-    <h3>In-Person Consultation - $150</h3>
-    <ul>
-      <li><strong>What’s Included:</strong></li>
-      <li>Everything in the phone/video consultation, plus:</li>
-      <li>On-site evaluation of your vehicle.</li>
-      <li>Hands-on recommendations for customization and upgrades.</li>
-      <li><strong>Duration:</strong> 1 hour max.</li>
-      <li><strong>Objective:</strong> Get a detailed, in-person assessment of your vehicle and a customized plan for your project.</li>
-      <li><strong>Perks:</strong></li>
-      <li>10% discount on your first service.</li>
-      <li>Free vehicle inspection report.</li>
-      <li>Priority scheduling for follow-up services.</li>
-      <li><strong>Note:</strong> Additional mileage fees apply for locations outside our service area.</li>
-    </ul>
-    <!-- Calendly Embed for In-Person Consultation -->
-    <div class="calendly-inline-widget" data-url="https://calendly.com/your-link/in-person-consultation" style="min-width:320px;height:600px;"></div>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
   </div>
 
   <!-- Footer -->
