@@ -8,33 +8,11 @@
   <meta name="keywords" content="car paint correction Atlanta, ceramic coating Atlanta, car detailing Atlanta, custom car paint Atlanta, car audio installation Atlanta, classic car restoration Atlanta, auto customization consultation Atlanta">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AutoRepair",
-    "name": "Substantial Auto Customs",
-    "image": "https://subautoatl.github.io/logo.jpg",
-    "description": "Atlanta’s premier auto customization studio specializing in paint correction, ceramic coatings, custom paint jobs, and more.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "123 Main St",
-      "addressLocality": "Atlanta",
-      "addressRegion": "GA",
-      "postalCode": "30301",
-      "addressCountry": "USA"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "33.7490",
-      "longitude": "-84.3880"
-    },
-    "telephone": "+1-404-555-1234",
-    "openingHours": "Mo-Fr 09:00-18:00",
-    "priceRange": "$$$"
-  }
-  </script>
   <style>
     /* General Styles */
+    html {
+      scroll-behavior: smooth;
+    }
     body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #1a1a1a; color: #fff; }
     h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
     a { color: #ff5722; text-decoration: none; }
@@ -125,38 +103,6 @@
       font-weight: bold;
     }
 
-    /* Portfolio Section */
-    .portfolio {
-      padding: 80px 20px;
-      background: #1a1a1a;
-      text-align: center;
-    }
-    .portfolio h2 {
-      font-size: 2.5rem;
-      margin-bottom: 40px;
-      color: #ff5722;
-    }
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .portfolio-item img {
-      width: 100%;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
-    .portfolio-item img:hover {
-      transform: scale(1.05);
-    }
-    .portfolio-item p {
-      font-size: 1rem;
-      margin: 10px 0;
-      color: #ccc;
-    }
-
     /* Testimonials Section */
     .testimonials {
       padding: 40px 20px;
@@ -221,30 +167,10 @@
       cursor: pointer;
       width: 100%;
     }
-
-    /* Social Media Section */
-    .social-media {
-      padding: 40px 20px;
-      background: #262626;
-      text-align: center;
-    }
-    .social-media h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #ff5722;
-    }
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-    .social-icons a {
-      font-size: 2rem;
-      color: #ff5722;
-      transition: color 0.3s ease;
-    }
-    .social-icons a:hover {
-      color: #e64a19;
+    #success-message {
+      display: none;
+      color: #4CAF50;
+      margin-top: 20px;
     }
 
     /* Footer */
@@ -311,6 +237,13 @@
         <p>Bring <strong>classic</strong>, <strong>exotic</strong>, and <strong>luxury vehicles</strong> back to life with our full restoration services. Preserve the legacy of your car with our expert <strong>car restoration</strong> in Atlanta.</p>
         <p class="price">Starting at $5,000</p>
       </div>
+    </div>
+  </div>
+
+  <!-- Consultation Section -->
+  <div id="consultation" class="services" data-aos="fade-up">
+    <h2>Consultation Services</h2>
+    <div class="services-grid">
       <div class="service-card">
         <i class="fas fa-phone"></i>
         <h3>Phone/Video Consultation</h3>
@@ -322,25 +255,6 @@
         <h3>In-Person Consultation</h3>
         <p>Get a detailed, in-person assessment of your vehicle and a customized plan for your project. Includes on-site evaluation and hands-on recommendations.</p>
         <p class="price">$150 for 1 hour</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Portfolio Section -->
-  <div class="portfolio" data-aos="fade-up">
-    <h2> Gallery/Portfolio</h2>
-    <div class="portfolio-grid">
-      <div class="portfolio-item">
-        <img src=" " alt="Custom Paint Job for Mustang GT in Atlanta">
-        <p>Custom Paint Job for Mustang GT</p>
-      </div>
-      <div class="portfolio-item">
-        <img src="project2.jpg" alt="Ceramic Coating Application for Tesla Model 3 in Atlanta">
-        <p>Ceramic Coating Application for Tesla Model 3</p>
-      </div>
-      <div class="portfolio-item">
-        <img src="project3.jpg" alt="Interior Detailing for Mercedes-Benz S-Class in Atlanta">
-        <p>Interior Detailing for Mercedes-Benz S-Class</p>
       </div>
     </div>
   </div>
@@ -360,43 +274,34 @@
 
   <!-- Contact Section -->
   <div id="contact" class="contact" data-aos="fade-up">
-  <h2>Get a Free Quote</h2>
-  <form action="https://formspree.io/f/xdkegzow" method="POST">
-    <input type="text" name="name" placeholder="Name" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <input type="tel" name="phone" placeholder="Phone" required>
-    <select name="service" required>
-      <option value="" disabled selected>Select a Service</option>
-      <option value="paint-refinishing">Paint Refinishing & Correction</option>
-      <option value="paint-protection">Ceramic Coating & Paint Protection</option>
-      <option value="detailing">High-End Detailing</option>
-      <option value="custom-paint">Custom Paint Jobs</option>
-      <option value="audio">Custom Audio Systems</option>
-      <option value="restorations">Classic & Exotic Car Restorations</option>
-      <option value="phone-consultation">Phone/Video Consultation</option>
-      <option value="in-person-consultation">In-Person Consultation</option>
-    </select>
-    <textarea name="message" placeholder="Tell us about your project (optional)"></textarea>
-    <button type="submit">Submit</button>
-  </form>
-</div>
+    <h2>Get a Free Quote</h2>
+    <form action="https://formspree.io/f/xdkegzow" method="POST">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Phone" required>
+      <select name="service" required>
+        <option value="" disabled selected>Select a Service</option>
+        <option value="paint-refinishing">Paint Refinishing & Correction</option>
+        <option value="paint-protection">Ceramic Coating & Paint Protection</option>
+        <option value="detailing">High-End Detailing</option>
+        <option value="custom-paint">Custom Paint Jobs</option>
+        <option value="audio">Custom Audio Systems</option>
+        <option value="restorations">Classic & Exotic Car Restorations</option>
+        <option value="phone-consultation">Phone/Video Consultation</option>
+        <option value="in-person-consultation">In-Person Consultation</option>
+      </select>
+      <textarea name="message" placeholder="Tell us about your project (optional)"></textarea>
+      <button type="submit">Submit</button>
+      <div id="success-message">
+        Thank you! Your message has been sent. We'll get back to you soon.
+      </div>
     </form>
-  </div>
-
-  <!-- Social Media Section -->
-  <div class="social-media" data-aos="fade-up">
-    <h2>Follow Us</h2>
-    <div class="social-icons">
-      <a href="https://instagram.com/luxury_auto_spa1" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://facebook.com/royalcartreatment" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://youtube.com/yourprofile" target="_blank"><i class="fab fa-youtube"></i></a>
-    </div>
   </div>
 
   <!-- Footer -->
   <footer>
     <p>📍 Serving Atlanta and Metro North, East, and Northeast areas.</p>
-    <p>📞 [470-722-8838] | 📧 [Your Email Address]</p>
+    <p>📞 [Your Phone Number] | 📧 [Your Email Address]</p>
     <p>🌐 <a href="https://subautoatl.github.io">SubstantialAuto.github.io</a></p>
   </footer>
 
@@ -404,6 +309,32 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
+  </script>
+
+  <!-- Form Submission Script -->
+  <script>
+    const form = document.querySelector('form');
+    const successMessage = document.getElementById('success-message');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault(); // Prevent the default form submission
+
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        form.reset(); // Clear the form
+        successMessage.style.display = 'block'; // Show the success message
+      } else {
+        alert('Oops! Something went wrong. Please try again.');
+      }
+    });
   </script>
 </body>
 </html>
