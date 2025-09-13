@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Alchemy of Atlanta - Service Menu</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .business-name {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 0;
+            color: #2c3e50;
+        }
+        .tagline {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            font-weight: normal;
+        }
+        .contact-info {
+            font-size: 1em;
+            color: #34495e;
+            margin-top: 10px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-top: 30px;
+        }
+        h2 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        .disclaimer {
+            font-style: italic;
+            color: #7f8c8d;
+            text-align: center;
+            font-size: 0.9em;
+            margin-top: 40px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f3f3f3;
+        }
+        .service-desc {
+            font-size: 0.85em;
+            color: #666;
+            display: block;
+        }
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 0;
+                width: 100%;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="business-name">AUTO ALCHEMY OF ATLANTA</h1>
+            <p class="tagline">Transforming Your Vehicle</p>
+            <p class="contact-info">(678-551-8278) | (subautoatl.github.io) |</p>
+        </div>
+
+        <p><strong>Disclaimer:</strong> All prices are starting estimates for vehicles in good condition. Final quotes may vary based on vehicle size, condition, and paint type. Please contact us for an exact quote.</p>
+
+        <h2>1. Exterior-Focused Services</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Service Tier</th>
+                    <th>Car / Sedan</th>
+                    <th>SUV / Mid-Size</th>
+                    <th>Truck / Large SUV</th>
+                    <th>Exotic / Hyper (Starting At)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Basic Hand Wash</strong><span class="service-desc">(2-Bucket Wash, Wheel Clean, Tire Dress, Dry)</span></td>
+                    <td>$50 - $70</td>
+                    <td>$70 - $90</td>
+                    <td>$90 - $110</td>
+                    <td>$200+</td>
+                </tr>
+                <tr>
+                    <td><strong>Basic Hand Wash & Decon</strong><span class="service-desc">(Adds Iron Remover & Clay Bar)</span></td>
+                    <td>$90 - $110</td>
+                    <td>$110 - $130</td>
+                    <td>$130 - $150</td>
+                    <td>$275+</td>
+                </tr>
+                <tr>
+                    <td><strong>Exterior Wash & Sealant</strong><span class="service-desc">(Wash & Decon + Paint Sealant application)</span></td>
+                    <td>$120 - $140</td>
+                    <td>$140 - $160</td>
+                    <td>$160 - $180</td>
+                    <td>$350+</td>
+                </tr>
+                <tr>
+                    <td><strong>1-Step Paint Correction & Sealant</strong><span class="service-desc">(Light polish to remove minor swirls & defects)</span></td>
+                    <td>$400 - $600</td>
+                    <td>$500 - $700</td>
+                    <td>$600 - $800</td>
+                    <td>$1,200+</td>
+                </tr>
+                <tr>
+                    <td><strong>2-Step Paint Correction & Coat</strong><span class="service-desc">(Heavy cut + refining polish for gloss)</span></td>
+                    <td>$800 - $1,200</td>
+                    <td>$1,000 - $1,400</td>
+                    <td>$1,200 - $1,600</td>
+                    <td>$2,500+</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>2. Interior-Focused Services</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Service Tier</th>
+                    <th>Car / Sedan</th>
+                    <th>SUV / Mid-Size</th>
+                    <th>Truck / Large SUV</th>
+                    <th>Exotic / Hyper (Starting At)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Basic Interior Clean</strong><span class="service-desc">(Vacuum, wipe down, glass clean, light dressing)</span></td>
+                    <td>$75 - $95</td>
+                    <td>$95 - $115</td>
+                    <td>$115 - $135</td>
+                    <td>$250+</td>
+                </tr>
+                <tr>
+                    <td><strong>Full Interior Detail</strong><span class="service-desc">(Includes Basic Hand Wash. Deep clean, shampoo/extraction, leather condition, vent cleaning)</span></td>
+                    <td>$250 - $350</td>
+                    <td>$300 - $400</td>
+                    <td>$375 - $500</td>
+                    <td>$750+</td>
+                </tr>
+                <tr>
+                    <td><strong>Add-On: Odor Removal</strong><span class="service-desc">(Ozone treatment)</span></td>
+                    <td colspan="4" style="text-align: center;">+$100 (Cars) | +$125 (SUVs) | +$150 (Trucks) | +$200 (Exotics)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>3. Comprehensive Packages (Interior + Exterior)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Service Tier</th>
+                    <th>Car / Sedan</th>
+                    <th>SUV / Mid-Size</th>
+                    <th>Truck / Large SUV</th>
+                    <th>Exotic / Hyper (Starting At)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Express Detail</strong><span class="service-desc">(Basic Hand Wash + Basic Interior Clean)</span></td>
+                    <td>$125 - $165</td>
+                    <td>$165 - $205</td>
+                    <td>$205 - $245</td>
+                    <td>$450+</td>
+                </tr>
+                <tr>
+                    <td><strong>Full Detail (Maintenance)</strong><span class="service-desc">(Wash, Decon, & Hand-Applied Sealant + Full Interior Detail)</span></td>
+                    <td>$340 - $460</td>
+                    <td>$410 - $530</td>
+                    <td>$505 - $625</td>
+                    <td>$1,000+</td>
+                </tr>
+                <tr>
+                    <td><strong>Full Detail w/ 1-Step Correction</strong><span class="service-desc">(1-Step Correction + Sealant + Full Interior Detail)</span></td>
+                    <td>$650 - $950</td>
+                    <td>$800 - $1,100</td>
+                    <td>$975 - $1,300</td>
+                    <td>$1,950+</td>
+                </tr>
+                <tr>
+                    <td><strong>Full Detail w/ 2-Step Correction</strong><span class="service-desc">(2-Step Correction + Sealant + Full Interior Detail)</span></td>
+                    <td>$1,050 - $1,550</td>
+                    <td>$1,300 - $1,800</td>
+                    <td>$1,575 - $2,100</td>
+                    <td>$3,250+</td>
+                </tr>
+                <tr>
+                    <td><strong>Show Car Preparation</strong><span class="service-desc">(Multi-Step Correction + Coating + Full Interior Detail)</span></td>
+                    <td>$1,750+</td>
+                    <td>$2,100+</td>
+                    <td>$2,475+</td>
+                    <td>$4,750+</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>4. Ceramic Coating Add-Ons</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Coating Tier (Durability)</th>
+                    <th>Car / Sedan</th>
+                    <th>SUV / Mid-Size</th>
+                    <th>Truck / Large SUV</th>
+                    <th>Exotic / Hyper (Starting At)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Spray Coating (1-2 Years)</strong><span class="service-desc">(Added to any wash or detail service)</span></td>
+                    <td>+$150 - $250</td>
+                    <td>+$200 - $300</td>
+                    <td>+$250 - $350</td>
+                    <td>+$400</td>
+                </tr>
+                <tr>
+                    <td><strong>Professional Ceramic (5-7 Years)</strong><span class="service-desc">(Requires full paint correction.)</span></td>
+                    <td>$1,500 - $2,500</td>
+                    <td>$1,800 - $2,800</td>
+                    <td>$2,200 - $3,200</td>
+                    <td>$4,000+</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>5. Additional Services</h2>
+        <p>We also offer a range of advanced services to tackle any challenge. Pricing is highly custom based on the project scope. Inquire for a detailed quote.</p>
+        <ul>
+            <li><strong>Heavier Paint Correction:</strong> For severe paint damage, sanding marks, or deep scratches that require multi-step wet sanding and compounding.</li>
+            <li><strong>Paint Touch-Up Services:</strong> Professional-grade paint touch-up to expertly blend and minimize the appearance of stone chips and scratches.</li>
+            <li><strong>Headlight Restoration</strong></li>
+            <li><strong>Fabric & Carpet Dyeing</strong></li>
+            <li><strong>Leather Repair & Recoloring</strong></li>
+        </ul>
+
+        <p class="disclaimer">*Final pricing may vary based on vehicle condition and specific requirements. A formal quote will be provided after inspection. Prices subject to change.<br>© 2025 Auto Alchemy of Atlanta. All Rights Reserved.</p>
+
+    </div>
+</body>
+</html
