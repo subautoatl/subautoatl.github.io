@@ -572,29 +572,6 @@
             font-size: 0.9rem;
         }
 
-        /* ====== FORMSPREE STYLING ====== */
-        .form-success {
-            background: rgba(40, 167, 69, 0.1);
-            border: 1px solid rgba(40, 167, 69, 0.2);
-            color: #28a745;
-            padding: 20px;
-            border-radius: var(--radius);
-            margin-top: 20px;
-            text-align: center;
-            display: none;
-        }
-
-        .form-error {
-            background: rgba(220, 53, 69, 0.1);
-            border: 1px solid rgba(220, 53, 69, 0.2);
-            color: #dc3545;
-            padding: 20px;
-            border-radius: var(--radius);
-            margin-top: 20px;
-            text-align: center;
-            display: none;
-        }
-
         /* ====== RESPONSIVE ====== */
         @media (max-width: 992px) {
             .nav-links {
@@ -1027,12 +1004,8 @@
             </p>
             
             <div class="contact-container">
-                <form class="contact-form" id="quoteForm">
-                    <!-- Formspree Configuration -->
-                    <input type="hidden" name="_subject" value="Auto Alchemy - New Quote Request">
-                    <input type="hidden" name="_cc" value="atlantacars11@gmail.com">
-                    <input type="hidden" name="_replyto" value="{{email}}">
-                    
+                <!-- SIMPLE FORMSPREE FORM - NO JAVASCRIPT NEEDED -->
+                <form class="contact-form" action="https://formspree.io/f/mykjodqp" method="POST">
                     <div class="form-group">
                         <label for="name">Full Name *</label>
                         <input type="text" id="name" name="name" required placeholder="Your name">
@@ -1074,17 +1047,6 @@
                     </div>
                     
                     <button type="submit" class="btn" style="width: 100%;">Submit Quote Request</button>
-                    
-                    <!-- Success/Error Messages -->
-                    <div id="formSuccess" class="form-success">
-                        <i class="fas fa-check-circle"></i> 
-                        <strong>Thank you!</strong> Your quote request has been sent. We'll contact you within 30 minutes.
-                    </div>
-                    
-                    <div id="formError" class="form-error">
-                        <i class="fas fa-exclamation-circle"></i> 
-                        <strong>Oops!</strong> Something went wrong. Please call us at <a href="tel:6785518278">(678) 551-8278</a>.
-                    </div>
                     
                     <p style="text-align: center; color: rgba(255,255,255,0.6); margin-top: 20px; font-size: 0.9rem;">
                         <i class="fas fa-clock"></i> We'll contact you within 30 minutes
@@ -1210,94 +1172,6 @@
             });
         });
         
-        // FORM SUBMISSION - SIMPLE AND WORKING
-        const quoteForm = document.getElementById('quoteForm');
-        const formSuccess = document.getElementById('formSuccess');
-        const formError = document.getElementById('formError');
-        
-        quoteForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            // Hide previous messages
-            formSuccess.style.display = 'none';
-            formError.style.display = 'none';
-            
-            const submitBtn = quoteForm.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            
-            // Change button to loading state
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            submitBtn.disabled = true;
-            
-            try {
-                // Create form data
-                const formData = new FormData(quoteForm);
-                
-                // Add extra fields for Formspree
-                formData.append('_cc', 'atlantacars11@gmail.com');
-                formData.append('_subject', 'Auto Alchemy - New Quote Request');
-                
-                console.log('Sending form to Formspree...');
-                
-                // Submit to Formspree - YOUR CORRECT ENDPOINT
-                const response = await fetch('https://formspree.io/f/mykjodqp', {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-                
-                console.log('Response status:', response.status);
-                console.log('Response ok:', response.ok);
-                
-                if (response.ok) {
-                    // Success
-                    formSuccess.style.display = 'block';
-                    quoteForm.reset();
-                    console.log('Form submitted successfully!');
-                    
-                    // Log to console for debugging
-                    console.log('=== FORM SUBMISSION DEBUG ===');
-                    console.log('Formspree ID: mykjodqp');
-                    console.log('Email should go to: atlantacars11@gmail.com');
-                    console.log('Response was successful');
-                    
-                } else {
-                    // Show error message
-                    formError.style.display = 'block';
-                    console.error('Formspree returned error:', response.status);
-                    
-                    // Still log success to user but show error message
-                    console.log('Form submission error - check Formspree dashboard');
-                }
-                
-            } catch (error) {
-                // Network or other error
-                formError.style.display = 'block';
-                console.error('Submission error:', error);
-                
-                // Still show success to user (better UX)
-                console.log('Network error - form may still have been submitted');
-                
-            } finally {
-                // Reset button
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-                
-                // Scroll to form messages
-                setTimeout(() => {
-                    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }, 100);
-            }
-        });
-        
-        // DEBUG: Test Formspree endpoint
-        console.log('=== FOR DEBUGGING ===');
-        console.log('Formspree endpoint: https://formspree.io/f/mykjodqp');
-        console.log('Your email: atlantacars11@gmail.com');
-        console.log('Test by running: fetch("https://formspree.io/f/mykjodqp", {method: "POST", body: new FormData()})');
-        
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -1358,6 +1232,12 @@
                 console.log('Phone call initiated to Auto Alchemy');
             });
         });
+        
+        // Debug: Check if form is working
+        console.log('=== FORM DEBUG INFO ===');
+        console.log('Formspree ID: mykjodqp');
+        console.log('Form action: https://formspree.io/f/mykjodqp');
+        console.log('Test the form by submitting - it should redirect to Formspree success page');
     </script>
 </body>
 </html>
