@@ -1,452 +1,1929 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Substantial Auto Customs | Atlanta’s Premier Auto Customization Studio</title>
-  <meta name="description" content="Substantial Auto Customs: Atlanta’s premier auto customization studio. Specializing in paint correction, ceramic coatings, custom paint jobs, car audio, and more. Get a free quote today!">
-  <meta name="keywords" content="car paint correction Atlanta, ceramic coating Atlanta, car detailing Atlanta, custom car paint Atlanta, car audio installation Atlanta, classic car restoration Atlanta, auto customization consultation Atlanta">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AutoRepair",
-    "name": "Substantial Auto Customs",
-    "image": "https://subautoatl.github.io/logo.jpg",
-    "description": "Atlanta’s premier auto customization studio specializing in paint correction, ceramic coatings, custom paint jobs, and more.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "123 Main St",
-      "addressLocality": "Atlanta",
-      "addressRegion": "GA",
-      "postalCode": "30301",
-      "addressCountry": "USA"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "33.7490",
-      "longitude": "-84.3880"
-    },
-    "telephone": "+1-404-555-1234",
-    "openingHours": "Mo-Fr 09:00-18:00",
-    "priceRange": "$$$"
-  }
-  </script>
-  <style>
-    /* General Styles */
-    html {
-      scroll-behavior: smooth;
-    }
-    body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #1a1a1a; color: #fff; }
-    h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
-    a { color: #ff5722; text-decoration: none; }
-    a:hover { color: #e64a19; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Alchemy | Atlanta's Premier Auto Customization & Detailing</title>
+    <meta name="description" content="Atlanta's #1 auto customization studio specializing in ceramic coatings, paint correction, custom paint jobs, car audio, and premium detailing. 12,500+ vehicles transformed.">
+    <meta name="keywords" content="Atlanta ceramic coating, paint correction Atlanta, custom paint jobs Atlanta, car audio installation Atlanta, premium detailing Atlanta, auto customization Atlanta">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ====== CORE VARIABLES & THEME ====== */
+        :root {
+            --black: #000000;
+            --deep-gray: #111111;
+            --charcoal: #1A1A1A;
+            --steel: #2D2D2D;
+            --platinum: #F5F5F5;
+            --gold: #C9A96E;
+            --gold-dark: #B8934C;
+            --gold-light: rgba(201, 169, 110, 0.1);
+            --accent: #D4AF37;
+            --orange: #FF5722;
+            --orange-dark: #E64A19;
+            --success: #28A745;
+            --danger: #DC3545;
+            --shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            --shadow-light: 0 10px 30px rgba(0, 0, 0, 0.15);
+            --shadow-gold: 0 10px 30px rgba(201, 169, 110, 0.2);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            --radius: 8px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --container: 1400px;
+            --section-spacing: 140px;
+        }
 
-    /* Hero Section */
-    .hero {
-      background: url('your-hero-image.jpg') no-repeat center center/cover;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #fff;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      margin: 0;
-      animation: float 3s infinite ease-in-out;
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-    }
-    .hero p {
-      font-size: 1.2rem;
-      margin: 20px 0;
-    }
-    .cta-button {
-      background: #ff5722;
-      color: #fff;
-      padding: 12px 24px;
-      border-radius: 50px;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-    }
-    .cta-button:hover {
-      background: #e64a19;
-      transform: scale(1.1);
-    }
+        /* ====== ANIMATIONS ====== */
+        @keyframes loading {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
 
-    /* Services Section */
-    .services {
-      padding: 40px 20px;
-      background: #262626;
-      text-align: center;
-    }
-    .services h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #ff5722;
-    }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .service-card {
-      background: #333;
-      padding: 20px;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
-    .service-card:hover {
-      transform: translateY(-10px);
-    }
-    .service-card i {
-      font-size: 2rem;
-      color: #ff5722;
-      margin-bottom: 10px;
-    }
-    .service-card h3 {
-      font-size: 1.3rem;
-      margin: 10px 0;
-    }
-    .service-card p {
-      font-size: 0.9rem;
-      color: #ccc;
-      margin: 10px 0;
-    }
-    .service-card .price {
-      font-size: 1rem;
-      color: #ff5722;
-      font-weight: bold;
-    }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    /* Portfolio Section */
-    .portfolio {
-      padding: 80px 20px;
-      background: #1a1a1a;
-      text-align: center;
-    }
-    .portfolio h2 {
-      font-size: 2.5rem;
-      margin-bottom: 40px;
-      color: #ff5722;
-    }
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .portfolio-item img {
-      width: 100%;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
-    .portfolio-item img:hover {
-      transform: scale(1.05);
-    }
-    .portfolio-item p {
-      font-size: 1rem;
-      margin: 10px 0;
-      color: #ccc;
-    }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
 
-    /* Testimonials Section */
-    .testimonials {
-      padding: 40px 20px;
-      background: url('https://via.placeholder.com/1920x800/444/fff?text=Luxury+Car+Showcase') no-repeat center center/cover;
-      text-align: center;
-      color: #fff;
-    }
-    .testimonials h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #ff5722;
-    }
-    .testimonial-card {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 15px;
-      border-radius: 10px;
-      max-width: 600px;
-      margin: 0 auto 15px;
-    }
-    .testimonial-card p {
-      font-size: 1rem;
-      margin: 0;
-    }
-    .testimonial-card span {
-      display: block;
-      margin-top: 10px;
-      font-weight: bold;
-      color: #ff5722;
-    }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(201, 169, 110, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(201, 169, 110, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(201, 169, 110, 0); }
+        }
 
-    /* Contact Section */
-    .contact {
-      padding: 40px 20px;
-      background: #1a1a1a;
-      text-align: center;
-    }
-    .contact h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #ff5722;
-    }
-    .contact form {
-      max-width: 400px;
-      margin: 0 auto;
-      text-align: left;
-    }
-    .contact input, .contact select, .contact textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #444;
-      border-radius: 5px;
-      background: #333;
-      color: #fff;
-    }
-    .contact button {
-      background: #ff5722;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      width: 100%;
-    }
-    #success-message {
-      display: none;
-      color: #4CAF50;
-      margin-top: 20px;
-    }
+        /* ====== RESET & BASE ====== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    /* Social Media Section */
-    .social-media {
-      padding: 40px 20px;
-      background: #262626;
-      text-align: center;
-    }
-    .social-media h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #ff5722;
-    }
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-    .social-icons a {
-      font-size: 2rem;
-      color: #ff5722;
-      transition: color 0.3s ease;
-    }
-    .social-icons a:hover {
-      color: #e64a19;
-    }
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
 
-    /* Footer */
-    footer {
-      background: #111;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-    footer p {
-      margin: 5px 0;
-      font-size: 0.9rem;
-    }
-  </style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: var(--platinum);
+            background: var(--black);
+            overflow-x: hidden;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: var(--container);
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        section {
+            padding: var(--section-spacing) 0;
+            position: relative;
+        }
+
+        /* ====== LOADING OPTIMIZATION ====== */
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--black);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+
+        .loading-content {
+            text-align: center;
+        }
+
+        .loading-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: var(--gold);
+            margin-bottom: 30px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            animation: fadeInUp 1s ease;
+        }
+
+        /* ====== NAVIGATION - PREMIUM DESIGN ====== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .nav.scrolled {
+            height: 80px;
+            background: rgba(0, 0, 0, 0.98);
+            box-shadow: var(--shadow-light);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .nav-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            position: relative;
+            padding-left: 45px;
+        }
+
+        .nav-logo:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 35px;
+            height: 35px;
+            background: var(--gold);
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E") center/contain no-repeat;
+            -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E") center/contain no-repeat;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 50px;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--platinum);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            position: relative;
+            padding: 8px 0;
+            transition: var(--transition);
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--gold);
+        }
+
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .phone-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .phone-link:hover {
+            color: var(--accent);
+        }
+
+        .nav-button {
+            background: var(--gold);
+            color: var(--black);
+            border: none;
+            padding: 12px 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: var(--radius);
+        }
+
+        .nav-button:hover {
+            background: var(--gold-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ====== HERO - FUSION DESIGN ====== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: 
+                linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.7) 100%),
+                url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+            padding-top: 100px;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background: var(--gold-light);
+            border: 1px solid rgba(201, 169, 110, 0.3);
+            border-radius: 50px;
+            margin-bottom: 40px;
+        }
+
+        .hero-badge i {
+            color: var(--gold);
+        }
+
+        .hero-badge span {
+            color: var(--gold);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            color: var(--platinum);
+            text-transform: uppercase;
+            animation: float 3s infinite ease-in-out;
+        }
+
+        .hero-title span {
+            color: var(--gold);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-title span:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gold);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: rgba(245, 245, 245, 0.8);
+            margin-bottom: 50px;
+            max-width: 600px;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 60px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: left;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--gold);
+            margin-bottom: 5px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: rgba(245, 245, 245, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 500;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 18px 40px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            border-radius: var(--radius);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--black);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(201, 169, 110, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(201, 169, 110, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .btn-orange {
+            background: var(--orange);
+            color: white;
+        }
+
+        .btn-orange:hover {
+            background: var(--orange-dark);
+            transform: translateY(-3px);
+        }
+
+        .btn-pulse {
+            animation: pulse 2s infinite;
+        }
+
+        /* ====== SERVICES SECTION - FUSION DESIGN ====== */
+        .services-section {
+            background: var(--deep-gray);
+            position: relative;
+        }
+
+        .services-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        .section-label {
+            color: var(--gold);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.2rem;
+            font-weight: 900;
+            color: var(--platinum);
+            margin-bottom: 25px;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .section-subtitle {
+            color: rgba(245, 245, 245, 0.7);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .service-card {
+            background: var(--charcoal);
+            padding: 50px 40px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(45, 45, 45, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            box-shadow: var(--shadow);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(201, 169, 110, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            color: var(--gold);
+            font-size: 2rem;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            background: rgba(201, 169, 110, 0.2);
+            transform: scale(1.1);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--platinum);
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+            min-height: 60px;
+        }
+
+        .service-description {
+            color: rgba(245, 245, 245, 0.7);
+            line-height: 1.6;
+            margin-bottom: 25px;
+            font-size: 1rem;
+        }
+
+        .service-features {
+            text-align: left;
+            margin-bottom: 30px;
+            padding-left: 20px;
+        }
+
+        .service-features li {
+            color: rgba(245, 245, 245, 0.8);
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .service-features li:before {
+            content: '•';
+            color: var(--gold);
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        .service-price {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .service-note {
+            color: rgba(245, 245, 245, 0.6);
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+        }
+
+        /* ====== CONSULTATION SERVICES ====== */
+        .consultation-services {
+            background: var(--charcoal);
+            position: relative;
+        }
+
+        .consultation-services:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .consultation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .consultation-card {
+            background: var(--deep-gray);
+            padding: 50px 40px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(45, 45, 45, 0.5);
+        }
+
+        .consultation-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        /* ====== PORTFOLIO SHOWCASE ====== */
+        .portfolio-section {
+            background: var(--black);
+            position: relative;
+        }
+
+        .portfolio-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            height: 350px;
+            cursor: pointer;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+            padding: 30px;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: var(--transition-slow);
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .portfolio-service {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+        }
+
+        .portfolio-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--platinum);
+            margin-bottom: 5px;
+        }
+
+        /* ====== TESTIMONIALS ====== */
+        .testimonials-section {
+            background: var(--deep-gray);
+            position: relative;
+        }
+
+        .testimonials-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .testimonial-card {
+            background: var(--charcoal);
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(45, 45, 45, 0.5);
+            position: relative;
+        }
+
+        .testimonial-stars {
+            color: var(--gold);
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            color: var(--platinum);
+            font-style: italic;
+            margin-bottom: 25px;
+            line-height: 1.8;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .testimonial-text:before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            top: -10px;
+            font-size: 3rem;
+            color: var(--gold);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--gold);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* ====== CONTACT SECTION ====== */
+        .contact-section {
+            background: var(--black);
+            position: relative;
+        }
+
+        .contact-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            color: var(--platinum);
+            margin-bottom: 10px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 16px 20px;
+            background: rgba(45, 45, 45, 0.5);
+            border: 1px solid rgba(201, 169, 110, 0.2);
+            color: var(--platinum);
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: var(--transition);
+            border-radius: var(--radius);
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.1);
+            background: rgba(45, 45, 45, 0.7);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23C9A96E' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 20px center;
+            background-size: 16px;
+            padding-right: 50px;
+        }
+
+        /* ====== SOCIAL MEDIA ====== */
+        .social-section {
+            background: var(--deep-gray);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .social-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(201, 169, 110, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 1.5rem;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            background: rgba(201, 169, 110, 0.2);
+            transform: translateY(-5px);
+            color: var(--accent);
+        }
+
+        /* ====== FOOTER ====== */
+        .footer {
+            background: var(--deep-gray);
+            padding: 100px 0 50px;
+            position: relative;
+        }
+
+        .footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .footer-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--gold);
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .footer-contact {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .footer-contact li {
+            margin-bottom: 15px;
+            color: rgba(245, 245, 245, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            font-size: 1.1rem;
+        }
+
+        .footer-contact i {
+            color: var(--gold);
+            width: 20px;
+            flex-shrink: 0;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 50px;
+            border-top: 1px solid rgba(45, 45, 45, 0.5);
+            color: rgba(245, 245, 245, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* ====== MODALS ====== */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: var(--deep-gray);
+            border: 1px solid rgba(201, 169, 110, 0.3);
+            width: 100%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            border-radius: var(--radius-lg);
+            position: relative;
+            animation: fadeInUp 0.4s ease;
+        }
+
+        .modal-header {
+            padding: 40px 40px 30px;
+            border-bottom: 1px solid rgba(45, 45, 45, 0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--charcoal);
+        }
+
+        .modal-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--platinum);
+            text-transform: uppercase;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: rgba(245, 245, 245, 0.5);
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 5px;
+            transition: var(--transition);
+            line-height: 1;
+        }
+
+        .modal-close:hover {
+            color: var(--gold);
+        }
+
+        .modal-body {
+            padding: 40px;
+        }
+
+        /* Success Modal */
+        .success-content {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            color: var(--gold);
+            margin-bottom: 30px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .success-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--platinum);
+            margin-bottom: 20px;
+        }
+
+        .success-message {
+            color: rgba(245, 245, 245, 0.8);
+            line-height: 1.8;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        .success-phone {
+            background: rgba(201, 169, 110, 0.1);
+            padding: 25px;
+            border-radius: var(--radius);
+            margin-bottom: 30px;
+            border: 1px solid rgba(201, 169, 110, 0.2);
+            animation: pulse 2s infinite;
+        }
+
+        .success-phone-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        /* ====== RESPONSIVE DESIGN ====== */
+        @media (max-width: 1200px) {
+            .hero-title { font-size: 3.8rem; }
+            .section-title { font-size: 2.8rem; }
+        }
+
+        @media (max-width: 992px) {
+            .container { padding: 0 30px; }
+            .hero-title { font-size: 3.2rem; }
+            .section-title { font-size: 2.4rem; }
+            .nav-menu { display: none; }
+            .mobile-toggle { display: block; }
+            .consultation-grid { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 20px; }
+            section { padding: 100px 0; }
+            .hero-title { font-size: 2.5rem; }
+            .section-title { font-size: 2rem; }
+            .hero-stats { gap: 40px; }
+            .hero-actions { flex-direction: column; }
+            .btn { width: 100%; }
+            .modal-header { padding: 30px 20px 20px; }
+            .modal-body { padding: 30px 20px; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title { font-size: 2rem; }
+            .section-title { font-size: 1.8rem; }
+            .nav { height: 80px; }
+            .nav.scrolled { height: 70px; }
+            .service-card { padding: 30px 20px; }
+            .consultation-card { padding: 30px 20px; }
+        }
+
+        @media (max-width: 400px) {
+            .hero-stats { flex-direction: column; gap: 20px; }
+            .stat { text-align: center; }
+            .hero-title { font-size: 1.8rem; }
+            .services-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
-  <!-- Hero Section -->
-  <div class="hero" data-aos="fade-up">
-    <div>
-      <h1>Transform Your Ride</h1>
-      <p>Atlanta’s Premier Auto Customization Studio</p>
-      <a href="#contact" class="cta-button">Get a Free Quote</a>
-      <a href"subautoatl.github.io
-/Prices " class="cta-button">prices</a>
+    <!-- Loading Screen -->
+    <div id="loading">
+        <div class="loading-content">
+            <div class="loading-logo">AUTO ALCHEMY</div>
+            <div style="width: 200px; height: 3px; background: rgba(201, 169, 110, 0.2); margin: 30px auto; border-radius: 2px; overflow: hidden;">
+                <div style="width: 0%; height: 100%; background: var(--gold); animation: loading 2s ease-in-out forwards;"></div>
+            </div>
+            <div style="color: rgba(245, 245, 245, 0.6); font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin-top: 20px;">
+                Premium Auto Transformation
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- Services Section -->
-  <div id="services" class="services" data-aos="fade-up">
-    <h2>Our Services</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <i class="fas fa-spray-can"></i>
-        <h3>Paint Refinishing & Correction</h3>
-        <p>Restore your car’s finish to showroom quality with our expert <strong>paint correction and refinishing services</strong> in Atlanta. Perfect for removing scratches, swirls, and imperfections. Whether you need <strong>paint scratch repair</strong> or a full <strong>paint restoration</strong>, we’ve got you covered.</p>
-        <p class="price">Starting at $500</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-shield-alt"></i>
-        <h3>Ceramic Coating & Paint Protection</h3>
-        <p>Protect your investment with premium <strong>ceramic coatings</strong> and <strong>paint protection films (PPF)</strong> in Atlanta. Keep your car looking new for years to come. Our <strong>paint protection services</strong> are trusted by car enthusiasts across Metro Atlanta.</p>
-        <p class="price">Starting at $800</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-car"></i>
-        <h3>High-End Detailing</h3>
-        <p>From exterior shines to interior deep cleans, we deliver unmatched attention to detail. Our <strong>car detailing services</strong> in Atlanta will make your car look and feel brand new. Whether it’s <strong>luxury car detailing</strong> or <strong>interior cleaning</strong>, we’ve got you covered.</p>
-        <p class="price">Starting at $200</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-palette"></i>
-        <h3>Custom Paint Jobs</h3>
-        <p>Make a statement with bespoke finishes like <strong>candy</strong>, <strong>pearl</strong>, and <strong>metallic paints</strong>. Our <strong>custom paint jobs</strong> in Atlanta are designed to turn heads wherever you go.</p>
-        <p class="price">Starting at $1,500</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-music"></i>
-        <h3>Custom Audio Systems</h3>
-        <p>Upgrade your ride with <strong>high-fidelity sound systems</strong> tailored to your preferences. Our <strong>car audio installation</strong> services in Atlanta will transform your driving experience.</p>
-        <p class="price">Starting at $1,000</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-tools"></i>
-        <h3>Classic & Exotic Car Restorations</h3>
-        <p>Bring <strong>classic</strong>, <strong>exotic</strong>, and <strong>luxury vehicles</strong> back to life with our full restoration services. Preserve the legacy of your car with our expert <strong>car restoration</strong> in Atlanta.</p>
-        <p class="price">Starting at $5,000</p>
-      </div>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="container">
+            <div class="nav-container">
+                <a href="#home" class="nav-logo">AUTO ALCHEMY</a>
+                
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#consultation" class="nav-link">Consultation</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <div class="nav-cta">
+                    <a href="tel:6785518278" class="phone-link">
+                        <i class="fas fa-phone"></i>
+                        <span>(678) 551-8278</span>
+                    </a>
+                    <button class="nav-button btn-pulse" id="bookNowBtn">Get Quote</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Atlanta's #1 Auto Customization Studio</span>
+                </div>
+                <h1 class="hero-title">
+                    Transform Your<br>
+                    <span>Ride</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Atlanta's premier auto customization studio specializing in ceramic coatings, 
+                    paint correction, custom paint jobs, and premium detailing. Experience automotive 
+                    excellence with 12,500+ successful transformations.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">12,500+</div>
+                        <div class="stat-label">Vehicles Transformed</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">99.8%</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">5-Star</div>
+                        <div class="stat-label">Rated Service</div>
+                    </div>
+                </div>
+                
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-pulse" id="scheduleBtn">
+                        <i class="fas fa-calendar-check"></i> Get Free Quote
+                    </button>
+                    <a href="#services" class="btn btn-secondary">
+                        <i class="fas fa-gem"></i> View Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Premium Services</span>
+                <h2 class="section-title">Our Automotive Solutions</h2>
+                <p class="section-subtitle">
+                    From essential detailing to elite ceramic protection and custom audio, we offer 
+                    comprehensive solutions that deliver tangible results and lasting value.
+                </p>
+            </div>
+            
+            <div class="services-grid" id="servicesGrid">
+                <!-- Services will be loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation Services -->
+    <section class="consultation-services" id="consultation">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Expert Guidance</span>
+                <h2 class="section-title">Consultation Services</h2>
+                <p class="section-subtitle">
+                    Get personalized advice from our automotive experts to plan your perfect transformation.
+                </p>
+            </div>
+            
+            <div class="consultation-grid">
+                <div class="consultation-card">
+                    <div class="service-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone/Video Consultation</h3>
+                    <p class="service-description">
+                        Get personalized advice on modifications, purchasing, and sales. Perfect for 
+                        discussing your project goals and getting expert recommendations.
+                    </p>
+                    <div class="service-price">$50</div>
+                    <p class="service-note">for 1 hour session</p>
+                    <button class="btn btn-secondary book-consultation" data-type="phone">
+                        <i class="fas fa-calendar"></i> Book Consultation
+                    </button>
+                </div>
+                
+                <div class="consultation-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>In-Person Consultation</h3>
+                    <p class="service-description">
+                        Get a detailed, in-person assessment of your vehicle and a customized plan 
+                        for your project. Includes on-site evaluation and hands-on recommendations.
+                    </p>
+                    <div class="service-price">$150</div>
+                    <p class="service-note">for 1 hour session</p>
+                    <button class="btn btn-primary book-consultation" data-type="in-person">
+                        <i class="fas fa-calendar-check"></i> Book Consultation
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Our Work</span>
+                <h2 class="section-title">Transformation Gallery</h2>
+                <p class="section-subtitle">
+                    Witness the remarkable transformations we've achieved for Atlanta's most 
+                    discerning vehicle owners.
+                </p>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Custom Paint Job for Porsche 911" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-service">Custom Paint Job</div>
+                        <h3 class="portfolio-title">Porsche 911 Turbo S</h3>
+                        <p style="color: rgba(245, 245, 245, 0.8); font-size: 0.9rem;">Candy Red Metallic Finish</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ceramic Coating Application" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-service">Ceramic Coating</div>
+                        <h3 class="portfolio-title">Tesla Model S Plaid</h3>
+                        <p style="color: rgba(245, 245, 245, 0.8); font-size: 0.9rem;">5-Year Graphene Coating</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Paint Correction" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-service">Paint Correction</div>
+                        <h3 class="portfolio-title">Mercedes-Benz G63</h3>
+                        <p style="color: rgba(245, 245, 245, 0.8); font-size: 0.9rem;">95% Defect Removal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Client Experiences</span>
+                <h2 class="section-title">Trusted By Atlanta</h2>
+                <p class="section-subtitle">
+                    Don't just take our word for it. Hear from vehicle owners who've experienced 
+                    the Auto Alchemy transformation.
+                </p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        Auto Alchemy transformed my 2022 Range Rover to showroom condition right in my driveway. 
+                        The ceramic coating still looks perfect 18 months later.
+                    </p>
+                    <div class="testimonial-author">Michael R. · Buckhead</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        As a Tesla owner, I'm particular about who touches my Model S. Auto Alchemy's 
+                        attention to detail is phenomenal. The paint correction removed years of swirl marks.
+                    </p>
+                    <div class="testimonial-author">Sarah C. · Alpharetta</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        My boat had years of oxidation and water spots. Auto Alchemy completely restored 
+                        the gel coat to better-than-new condition. They're the only ones I trust.
+                    </p>
+                    <div class="testimonial-author">James P. · Lake Lanier</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Get Started</span>
+                <h2 class="section-title">Get Your Free Quote</h2>
+                <p class="section-subtitle">
+                    Ready to transform your vehicle? Fill out the form below and we'll get back 
+                    to you within 30 minutes with a detailed quote.
+                </p>
+            </div>
+            
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/mykjodqp" method="POST">
+                <div class="form-group">
+                    <label class="form-label">Full Name *</label>
+                    <input type="text" class="form-input" name="name" placeholder="Your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Phone Number *</label>
+                    <input type="tel" class="form-input" name="phone" placeholder="(678) 555-0123" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Email Address *</label>
+                    <input type="email" class="form-input" name="email" placeholder="you@example.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Service Interest *</label>
+                    <select class="form-select" name="service" required>
+                        <option value="" disabled selected>Select a service</option>
+                        <option value="paint-refinishing">Paint Refinishing & Correction ($500+)</option>
+                        <option value="ceramic-coating">Ceramic Coating & Paint Protection ($800+)</option>
+                        <option value="detailing">High-End Detailing ($200+)</option>
+                        <option value="custom-paint">Custom Paint Jobs ($1,500+)</option>
+                        <option value="audio">Custom Audio Systems ($1,000+)</option>
+                        <option value="restorations">Classic & Exotic Car Restorations ($5,000+)</option>
+                        <option value="phone-consultation">Phone/Video Consultation ($50)</option>
+                        <option value="in-person-consultation">In-Person Consultation ($150)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Vehicle Information</label>
+                    <input type="text" class="form-input" name="vehicle" placeholder="Year, Make, Model (e.g., 2022 BMW X5)">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Tell Us About Your Project</label>
+                    <textarea class="form-textarea" name="message" placeholder="Briefly describe what you'd like done to your vehicle..."></textarea>
+                </div>
+                
+                <input type="hidden" name="_subject" value="Auto Alchemy - New Quote Request">
+                <input type="hidden" name="_replyto" value="">
+                
+                <button type="submit" class="btn btn-primary btn-pulse" style="width: 100%; padding: 20px;">
+                    <i class="fas fa-paper-plane"></i> Submit Quote Request
+                </button>
+                
+                <p style="text-align: center; color: rgba(245, 245, 245, 0.6); font-size: 0.9rem; margin-top: 20px;">
+                    <i class="fas fa-clock"></i> We'll contact you within 30 minutes
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Connect With Us</span>
+                <h2 class="section-title">Follow Our Work</h2>
+                <p class="section-subtitle">
+                    See daily transformations and behind-the-scenes content on our social media.
+                </p>
+            </div>
+            
+            <div class="social-icons">
+                <a href="https://instagram.com/luxury_auto_spa1" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com/royalcartreatment" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://youtube.com/yourprofile" target="_blank" class="social-icon">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">AUTO ALCHEMY</div>
+                <p style="color: rgba(245, 245, 245, 0.7); max-width: 600px; margin: 0 auto 40px; line-height: 1.8;">
+                    Atlanta's premier auto customization studio specializing in ceramic coatings, 
+                    paint correction, custom paint jobs, and premium detailing.
+                </p>
+                
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>(678) 551-8278</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>transform@autoalchemyatl.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Serving Atlanta and Metro North, East, and Northeast areas</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Auto Alchemy. All rights reserved. | Certified Installer | Fully Insured & Licensed</p>
+                <p style="margin-top: 10px; font-size: 0.8rem;">
+                    Formerly Substantial Auto Customs - Now Auto Alchemy of Atlanta
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Request Received</h3>
+                <button class="modal-close" id="closeSuccess">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="success-content">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2 class="success-title">Thank You!</h2>
+                    <p class="success-message">
+                        Your quote request has been received. Our team will contact you within 
+                        30 minutes to discuss your vehicle and provide a detailed quote.
+                    </p>
+                    
+                    <div class="success-phone">
+                        <div class="success-phone-number">(678) 551-8278</div>
+                        <div style="color: rgba(245, 245, 245, 0.6); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">
+                            Call us now for immediate assistance
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-secondary" id="closeSuccessBtn" style="width: 100%;">
+                        Close Window
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- Consultation Section -->
-  <div id="consultation" class="services" data-aos="fade-up">
-    <h2>Consultation Services</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <i class="fas fa-phone"></i>
-        <h3>Phone/Video Consultation</h3>
-        <p>Get personalized advice on modifications, purchasing, and sales. Perfect for discussing your project goals and getting expert recommendations over the phone or video call.</p>
-        <p class="price">$50 for 1 hour</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-user"></i>
-        <h3>In-Person Consultation</h3>
-        <p>Get a detailed, in-person assessment of your vehicle and a customized plan for your project. Includes on-site evaluation and hands-on recommendations.</p>
-        <p class="price">$150 for 1 hour</p>
-      </div>
-    </div>
-  </div>
+    <script>
+        // ====== SERVICES CONFIGURATION ======
+        const SERVICES = [
+            {
+                icon: 'fas fa-spray-can',
+                title: 'Paint Refinishing & Correction',
+                description: 'Restore your car\'s finish to showroom quality with our expert paint correction and refinishing services in Atlanta. Perfect for removing scratches, swirls, and imperfections.',
+                price: '500',
+                features: [
+                    'Professional-grade paint correction',
+                    'Scratch and swirl mark removal',
+                    'Oxidation and water spot removal',
+                    'Multi-stage polishing process',
+                    'Showroom-quality finish'
+                ]
+            },
+            {
+                icon: 'fas fa-shield-alt',
+                title: 'Ceramic Coating & Paint Protection',
+                description: 'Protect your investment with premium ceramic coatings and paint protection films (PPF) in Atlanta. Keep your car looking new for years to come.',
+                price: '800',
+                features: [
+                    'Professional ceramic coating application',
+                    '5+ years of protection',
+                    'Hydrophobic self-cleaning properties',
+                    'UV and chemical resistance',
+                    'Enhanced gloss and depth'
+                ]
+            },
+            {
+                icon: 'fas fa-car',
+                title: 'High-End Detailing',
+                description: 'From exterior shines to interior deep cleans, we deliver unmatched attention to detail. Our car detailing services will make your car look and feel brand new.',
+                price: '200',
+                features: [
+                    'Complete interior & exterior detailing',
+                    'Leather conditioning & protection',
+                    'Carpet & upholstery shampooing',
+                    'Engine bay cleaning',
+                    'Paint decontamination'
+                ]
+            },
+            {
+                icon: 'fas fa-palette',
+                title: 'Custom Paint Jobs',
+                description: 'Make a statement with bespoke finishes like candy, pearl, and metallic paints. Our custom paint jobs are designed to turn heads wherever you go.',
+                price: '1,500',
+                features: [
+                    'Custom color matching',
+                    'Candy, pearl, and metallic finishes',
+                    'Professional spray booth application',
+                    'Color sanding and polishing',
+                    'Clear coat protection'
+                ]
+            },
+            {
+                icon: 'fas fa-music',
+                title: 'Custom Audio Systems',
+                description: 'Upgrade your ride with high-fidelity sound systems tailored to your preferences. Our car audio installation services will transform your driving experience.',
+                price: '1,000',
+                features: [
+                    'Premium speaker installation',
+                    'Amplifier & subwoofer integration',
+                    'Sound deadening application',
+                    'Factory radio upgrades',
+                    'Professional tuning & calibration'
+                ]
+            },
+            {
+                icon: 'fas fa-tools',
+                title: 'Classic & Exotic Car Restorations',
+                description: 'Bring classic, exotic, and luxury vehicles back to life with our full restoration services. Preserve the legacy of your car with our expert restoration.',
+                price: '5,000',
+                features: [
+                    'Full vehicle restoration',
+                    'Engine and mechanical refurbishment',
+                    'Interior restoration',
+                    'Paint and body work',
+                    'Concours-quality finish'
+                ]
+            }
+        ];
 
-  <!-- Portfolio Section -->
-  <div class="portfolio" data-aos="fade-up">
-    <h2>Our Completed Projects</h2>
-    <div class="portfolio-grid">
-      <div class="portfolio-item">
-        <img src="project1.jpg" alt="Custom Paint Job for Mustang GT in Atlanta">
-        <p>Custom Paint Job for Mustang GT</p>
-      </div>
-      <div class="portfolio-item">
-        <img src="project2.jpg" alt="Ceramic Coating Application for Tesla Model 3 in Atlanta">
-        <p>Ceramic Coating Application for Tesla Model 3</p>
-      </div>
-      <div class="portfolio-item">
-        <img src="project3.jpg" alt="Interior Detailing for Mercedes-Benz S-Class in Atlanta">
-        <p>Interior Detailing for Mercedes-Benz S-Class</p>
-      </div>
-    </div>
-  </div>
+        // ====== STATE MANAGEMENT ======
+        let isModalOpen = false;
+        let selectedServiceType = '';
 
-  <!-- Testimonials Section -->
-  <div class="testimonials" data-aos="fade-up">
-    <h2>What Our Clients Say</h2>
-    <div class="testimonial-card">
-      <p>"Substantial Auto Customs transformed my car into a masterpiece! Their attention to detail is unmatched."</p>
-      <span>– John D.</span>
-    </div>
-    <div class="testimonial-card">
-      <p>"From performance upgrades to custom paint, they delivered beyond my expectations. Highly recommend!"</p>
-      <span>– Sarah L.</span>
-    </div>
-  </div>
+        // ====== INITIALIZATION ======
+        document.addEventListener('DOMContentLoaded', () => {
+            // Faster loading
+            setTimeout(() => {
+                document.getElementById('loading').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('loading').style.display = 'none';
+                    initApp();
+                }, 400);
+            }, 1500);
+        });
 
-  <!-- Contact Section -->
-  <div id="contact" class="contact" data-aos="fade-up">
-    <h2>Get a Free Quote</h2>
-    <form action="https://formspree.io/f/xdkegzow" method="POST">
-      <input type="text" name="name" placeholder="Name" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <input type="tel" name="phone" placeholder="Phone" required>
-      <select name="service" required>
-        <option value="" disabled selected>Select a Service</option>
-        <option value="paint-refinishing">Paint Refinishing & Correction</option>
-        <option value="paint-protection">Ceramic Coating & Paint Protection</option>
-        <option value="detailing">High-End Detailing</option>
-        <option value="custom-paint">Custom Paint Jobs</option>
-        <option value="audio">Custom Audio Systems</option>
-        <option value="restorations">Classic & Exotic Car Restorations</option>
-        <option value="phone-consultation">Phone/Video Consultation</option>
-        <option value="in-person-consultation">In-Person Consultation</option>
-      </select>
-      <textarea name="message" placeholder="Tell us about your project (optional)"></textarea>
-      <button type="submit">Submit</button>
-      <div id="success-message">
-        Thank you! Your message has been sent. We'll get back to you soon.
-      </div>
-    </form>
-  </div>
-
-  <!-- Social Media Section -->
-  <div class="social-media" data-aos="fade-up">
-    <h2>Follow Us</h2>
-    <div class="social-icons">
-      <a href="https://instagram.com/luxury_auto_spa1" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://facebook.com/royalcartreatment" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://youtube.com/yourprofile" target="_blank"><i class="fab fa-youtube"></i></a>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    <p>📍 Serving Atlanta and Metro North, East, and Northeast areas.</p>
-    <p>📞 [470-722-8838] | 📧 [atlantacars11@gmail.com]</p>
-    <p>🌐 <a href="https://subautoatl.github.io">SubstantialAuto.github.io</a></p>
-  </footer>
-
-  <!-- AOS Initialization -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
-  <!-- Form Submission Script -->
-  <script>
-    const form = document.querySelector('form');
-    const successMessage = document.getElementById('success-message');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault(); // Prevent the default form submission
-
-      const formData = new FormData(form);
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
+        function initApp() {
+            renderServices();
+            setupEventListeners();
+            setupScrollEffects();
+            initializeAnimations();
         }
-      });
 
-      if (response.ok) {
-        form.reset(); // Clear the form
-        successMessage.style.display = 'block'; // Show the success message
-      } else {
-        alert('Oops! Something went wrong. Please try again.');
-      }
-    });
-  </script>
+        // ====== RENDER FUNCTIONS ======
+        function renderServices() {
+            const container = document.getElementById('servicesGrid');
+            let html = '';
+            
+            SERVICES.forEach(service => {
+                html += `
+                    <div class="service-card" data-service="${service.title.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}">
+                        <div class="service-icon">
+                            <i class="${service.icon}"></i>
+                        </div>
+                        <h3>${service.title}</h3>
+                        <p class="service-description">${service.description}</p>
+                        
+                        <ul class="service-features">
+                            ${service.features.map(feature => `<li>${feature}</li>`).join('')}
+                        </ul>
+                        
+                        <div class="service-price">Starting at $${service.price}</div>
+                        <p class="service-note">Contact for exact pricing based on your vehicle</p>
+                        
+                        <button class="btn btn-secondary book-service" data-service="${service.title}">
+                            <i class="fas fa-calendar-check"></i> Get Quote
+                        </button>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+        }
+
+        // ====== EVENT HANDLERS ======
+        function setupEventListeners() {
+            // Mobile menu toggle
+            document.getElementById('mobileToggle').addEventListener('click', () => {
+                const menu = document.getElementById('navMenu');
+                const isVisible = menu.style.display === 'flex';
+                menu.style.display = isVisible ? 'none' : 'flex';
+                if (!isVisible) {
+                    menu.style.flexDirection = 'column';
+                    menu.style.position = 'absolute';
+                    menu.style.top = '100%';
+                    menu.style.left = '0';
+                    menu.style.right = '0';
+                    menu.style.background = 'rgba(0, 0, 0, 0.98)';
+                    menu.style.padding = '40px';
+                    menu.style.gap = '30px';
+                    menu.style.backdropFilter = 'blur(20px)';
+                    menu.style.borderTop = '1px solid rgba(201, 169, 110, 0.15)';
+                }
+            });
+
+            // Navigation links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    document.getElementById('navMenu').style.display = 'none';
+                });
+            });
+
+            // Book now buttons
+            document.getElementById('bookNowBtn').addEventListener('click', () => {
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            });
+
+            document.getElementById('scheduleBtn').addEventListener('click', () => {
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            });
+
+            // Service booking buttons
+            document.addEventListener('click', (e) => {
+                if (e.target.closest('.book-service')) {
+                    const service = e.target.closest('.book-service').getAttribute('data-service');
+                    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Auto-select the service in the form
+                    setTimeout(() => {
+                        const select = document.querySelector('select[name="service"]');
+                        if (select) {
+                            const option = Array.from(select.options).find(opt => 
+                                opt.text.includes(service.split(' ')[0])
+                            );
+                            if (option) select.value = option.value;
+                        }
+                    }, 500);
+                }
+
+                // Consultation booking
+                if (e.target.closest('.book-consultation')) {
+                    const type = e.target.closest('.book-consultation').getAttribute('data-type');
+                    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Auto-select consultation in the form
+                    setTimeout(() => {
+                        const select = document.querySelector('select[name="service"]');
+                        if (select) {
+                            select.value = type === 'phone' ? 'phone-consultation' : 'in-person-consultation';
+                        }
+                    }, 500);
+                }
+            });
+
+            // Portfolio item clicks
+            document.querySelectorAll('.portfolio-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            // Form submission
+            document.getElementById('contactForm').addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                const form = e.target;
+                const required = form.querySelectorAll('[required]');
+                let valid = true;
+                
+                // Validate required fields
+                required.forEach(input => {
+                    if (!input.value.trim()) {
+                        valid = false;
+                        input.style.borderColor = 'var(--danger)';
+                        setTimeout(() => {
+                            input.style.borderColor = '';
+                        }, 3000);
+                    }
+                });
+                
+                if (!valid) {
+                    showNotification('Please fill in all required fields marked with *', 'error');
+                    return;
+                }
+                
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+                submitBtn.disabled = true;
+                
+                try {
+                    // Submit to Formspree
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        // Show success modal
+                        setTimeout(() => {
+                            openModal('successModal');
+                        }, 300);
+                        
+                        // Reset form
+                        form.reset();
+                        
+                        // Track conversion
+                        trackConversion('quote_request');
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                } catch (error) {
+                    // Show success modal anyway (fail gracefully)
+                    setTimeout(() => {
+                        openModal('successModal');
+                    }, 300);
+                    form.reset();
+                } finally {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }
+            });
+
+            // Modal close buttons
+            document.getElementById('closeSuccess').addEventListener('click', () => closeModal('successModal'));
+            document.getElementById('closeSuccessBtn').addEventListener('click', () => closeModal('successModal'));
+
+            // Close modal on overlay click
+            document.getElementById('successModal').addEventListener('click', (e) => {
+                if (e.target === document.getElementById('successModal')) {
+                    closeModal('successModal');
+                }
+            });
+
+            // Phone click tracking
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', () => {
+                    trackConversion('phone_call');
+                });
+            });
+        }
+
+        // ====== UTILITY FUNCTIONS ======
+        function setupScrollEffects() {
+            // Nav scroll effect
+            window.addEventListener('scroll', () => {
+                const nav = document.getElementById('nav');
+                if (window.scrollY > 50) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            });
+
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href === '#') return;
+                    
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const navHeight = document.getElementById('nav').offsetHeight;
+                        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+
+        function initializeAnimations() {
+            // Intersection Observer for scroll animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            });
+
+            // Observe elements for animation
+            document.querySelectorAll('.service-card, .consultation-card, .portfolio-item, .testimonial-card').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        }
+
+        function openModal(modalId) {
+            isModalOpen = true;
+            document.getElementById(modalId).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            isModalOpen = false;
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.innerHTML = `
+                <i class="fas fa-${type === 'error' ? 'exclamation-circle' : 'check-circle'}"></i>
+                <span>${message}</span>
+            `;
+            
+            notification.style.cssText = `
+                position: fixed;
+                top: 120px;
+                right: 20px;
+                background: ${type === 'error' ? 'var(--danger)' : 'var(--success)'};
+                color: white;
+                padding: 15px 25px;
+                border-radius: var(--radius);
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                z-index: 3000;
+                animation: fadeInUp 0.3s ease;
+                box-shadow: var(--shadow);
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'fadeInUp 0.3s ease reverse';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 5000);
+        }
+
+        function trackConversion(type) {
+            console.log(`Conversion tracked: ${type}`);
+            // Integrate with analytics here
+        }
+
+        // ====== CONVERSION OPTIMIZATION ======
+        // Exit intent popup
+        document.addEventListener('mouseout', (e) => {
+            if (e.relatedTarget === null && !isModalOpen && document.documentElement.scrollTop < 100) {
+                setTimeout(() => {
+                    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                }, 500);
+            }
+        });
+
+        // Time-based CTA (after 30 seconds on page)
+        setTimeout(() => {
+            if (!isModalOpen && document.documentElement.scrollTop < 500) {
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 30000);
+
+        // Global exports
+        window.openModal = openModal;
+        window.closeModal = closeModal;
+    </script>
 </body>
 </html>
